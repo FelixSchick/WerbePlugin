@@ -1,0 +1,8 @@
+name: WerbePlugin
+version: ${project.version}
+main: de.illegalacces.werbeplugin.WerbePlugin
+api-version: 1.14
+authors: [ IllegalAccess ]
+commands:
+  werbung:
+  tpw:
