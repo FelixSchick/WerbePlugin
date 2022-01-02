@@ -30,11 +30,11 @@ public class WerbungCommand implements CommandExecutor {
                         TextComponent text = new TextComponent("§6§l"+ message);
                         text.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/tpw "+ message));
                         text.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder("Clicke um teleportiert zu werden.").create()));
-                        Bukkit.getServer().broadcastMessage("§8---------- §4§lExemple Server Advertise §8§l----------");
+                        Bukkit.getServer().broadcastMessage("§8---------- §4§lExample Server Advertise §8§l----------");
                         Bukkit.getServer().spigot().broadcast(text);
                         Bukkit.getServer().broadcastMessage("§8---------------------------------------------");
                     } else {
-                        player.sendMessage("§4§lExemple Server Advertise §8§l |  Dein Text muss größe als nix sein.");
+                        player.sendMessage("§4§lExample Server Advertise §8§l |  Dein Text muss größe als nix sein.");
                     }
                     CooldownManager.INSTANCE.setCooldown(player.getUniqueId(), 300);
                     new BukkitRunnable() {
@@ -48,7 +48,7 @@ public class WerbungCommand implements CommandExecutor {
                             }
                             CooldownManager.INSTANCE.setCooldown(player.getUniqueId(), timeLeft - 1);
                         }
-                    }.runTaskTimer(WerbePlugin.plugin, 20, 20);
+                    }.runTaskTimer(WerbePlugin.plugin, 0, 20);
 
                 } else {
                     player.sendMessage(timeLeft + " sekunden bevor du wieder werbung machen kannst.");
